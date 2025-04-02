@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // your code here
 });
 let form = document.getElementById("create-task-form");
- let task = document.getElementById("tasks");
- form.addEventListener("submit", (e) => {
+let task = document.getElementById("tasks");
+form.addEventListener("submit", (e) => {
   e.preventDefault(); 
   const newTaskDescription = document.getElementById(
     "new-task-description"
@@ -18,9 +18,10 @@ let form = document.getElementById("create-task-form");
   deleteButton.textContent = "❎";
   deleteButton.style.marginLeft = "10px";
   deleteButton.addEventListener("click", () => taskItem.remove());
+
   taskItem.appendChild(deleteButton);
- 
-   task.appendChild(taskItem);
- 
-   form.reset();
- });
+
+  task.appendChild(taskItem);
+
+  form.reset();
+});
